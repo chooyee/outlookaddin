@@ -4,6 +4,7 @@
  */
 
 /* global document, Office */
+let list;
 
 Office.onReady((info) => {
   if (info.host === Office.HostType.Outlook) {
@@ -24,7 +25,7 @@ Office.onReady((info) => {
   }
 });
 
-export async function run() {
+async function run() {
   // Clear the list of previously selected messages, if any.
   clearList(list);
 
