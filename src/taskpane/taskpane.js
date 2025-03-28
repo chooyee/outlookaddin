@@ -44,7 +44,7 @@ async function run() {
 // Gets the subject line and sender's email address of each selected message.
 async function getItemInfo(selectedItems) {
   for (const item of selectedItems) {
-    addToList(item.id + ":" + item.subject);
+    addToList(item.itemId + ":" + item.subject);
     if (Office.context.requirements.isSetSupported("Mailbox", "1.15")) {
       await getSenderEmailAddress(item);
     }
